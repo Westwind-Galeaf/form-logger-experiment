@@ -11,24 +11,4 @@
 |
 */
 
-use Illuminate\Http\Request;
-
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
-
 $router->post('/', 'EntryController@insert');
-
-//$router->post('/', function (Request $request) {
-//
-//    $service = \App\Models\Service::where($request->only('key'))->first();
-//
-//    $data = $request->except('key');
-//
-//    \App\Models\Entry::create([
-//        'service_id' => $service->id,
-//        'data' => json_encode($data),
-//    ]);
-//
-//    return ['success' => true, 'result' => 'Запись успешно добавлена'];
-//});
